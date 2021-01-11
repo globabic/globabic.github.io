@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <style>
   html {
-    height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,10 +12,15 @@
     background: -ms-linear-gradient(to bottom right, #444096, #1b1d44);
     background: -o-linear-gradient(to bottom right, #444096, #1b1d44);
     background: linear-gradient(to bottom right, #444096, #1b1d44);
+    margin: 0;
+    padding: 0;
   }
 
   body {
     margin: 10%;
+  }
+
+  header {
     display: flex;
     flex-direction: row;
   }
@@ -29,16 +33,34 @@
     width: 100%;
   }
 
-  .halfBlock > video {
-    width: 100%;
+  .imagesBlock {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 50pt;
+    grid-gap: 10px;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+
+  .imagesBlock > img {
+    width: auto;
+    height: 50pt;
   }
 </style>
 <html>
   <body>
-    <div id="illustration" class="halfBlock"><img src="./nobcg.png" /></div>
-    <div id="logo" class="halfBlock">
-
-      <video autoplay ><source src="./Flickering logo_short.mp4" type="video/mp4" /> </video>
+    <header>
+      <div id="illustration" class="halfBlock"><img src="./nobcg.png" /></div>
+      <div id="logo" class="halfBlock">
+        <img src="nobgfast.gif" />
+      </div>
+    </header>
+    <div id="technologies" class="imagesBlock">
+      <img src="./1280px-React-icon.svg.png" />
+      <img src="./Ecmascript-logo-bf5110fcdc155bf03a62c7863573ec65-21213.png" />
+      <img src="./relay-logo-svg-vector.svg" />
+      <img src="./graphql-logo-png-transparent.png" />
+      <img src="./nodejs.png" />
     </div>
   </body>
 </html>

@@ -22,15 +22,31 @@
     background: linear-gradient(to bottom right, #444096, #1b1d44);
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
   }
 
   body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
     margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   header {
     display: flex;
     flex-direction: row;
+    width: 100%;
+  }
+
+  footer {
+    margin: 2%;
   }
 
   .halfBlock {
@@ -48,6 +64,7 @@
     grid-gap: 10px;
     justify-content: space-between;
     margin-top: 5%;
+    width: 100%;
   }
 
   .imagesBlock > img {
@@ -61,10 +78,15 @@
     height: 250px;
     margin: auto;
     user-select: none;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
   }
 
   .logo b {
-    font: 400 19vh "clipregular";
+    font-family: "clipregular";
+    font-weight: 400;
+    font-size: calc(4vw + 3vh);
     color: #7d12ff;
     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #7d12ff, 0 0 0.5em #6a11d8,
       0 0 0.1em #6113c0, 0 10px 3px #000;
@@ -75,6 +97,7 @@
   .logo b span:nth-of-type(2) {
     animation: blink linear infinite 3s;
   }
+
   @keyframes blink {
     78% {
       color: inherit;
@@ -107,30 +130,50 @@
       text-shadow: inherit;
     }
   }
+
+  a {
+    color: #7d12ff;
+    text-decoration: none;
+    font-family: "roboto";
+    font-weight: 300;
+    font-size: calc(1vw + 1vh);
+  }
+
+  a:visited {
+    color: #9f5ef0;
+  }
+
+  a:hover {
+    color: #a058f8;
+  }
 </style>
 <html>
   <body>
-    <header>
-      <div id="illustration" class="halfBlock"><img src="./nobcg.png" /></div>
-      <div id="logo" class="halfBlock">
-        <div class="logo"><b>B<span>a</span>n<span>d</span>uric</b></div>
+    <div class="page">
+      <header>
+        <div id="illustration" class="halfBlock"><img src="./nobcg.png" /></div>
+        <div id="logo" class="halfBlock">
+          <div class="logo"><b>B<span>a</span>n<span>d</span>uric</b></div>
+        </div>
+      </header>
+      <div id="technologies" class="imagesBlock">
+        <img src="./1280px-React-icon.svg.png" />
+        <img
+          src="./Ecmascript-logo-bf5110fcdc155bf03a62c7863573ec65-21213.png"
+        />
+        <img src="./relay-logo-svg-vector.svg" />
+        <img src="./graphql-logo-png-transparent.png" />
+        <img src="./nodejs.png" />
       </div>
-    </header>
-    <div id="technologies" class="imagesBlock">
-      <img src="./1280px-React-icon.svg.png" />
-      <img src="./Ecmascript-logo-bf5110fcdc155bf03a62c7863573ec65-21213.png" />
-      <img src="./relay-logo-svg-vector.svg" />
-      <img src="./graphql-logo-png-transparent.png" />
-      <img src="./nodejs.png" />
+      <footer>
+        <div id="contact">
+          <p>
+            <a href="mailto:globabicbanduric@gmail.com"
+              >globabicbanduric@gmail.com</a
+            >
+          </p>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div id="contact">
-        <p>
-          <a href="mailto:globabicbanduric@gmail.com"
-            >globabicbanduric@gmail.com</a
-          >>
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
